@@ -1,9 +1,13 @@
 // Package adder provides functionality to add 2 numbers.
 package adder
 
+import (
+	"golang.org/x/exp/constraints"
+)
+
 // Number is a constraint that permits any integer or floating-point type.
 type Number interface {
-	~int | ~float64
+	constraints.Integer | constraints.Float
 }
 
 // Add adds two Numbers .
